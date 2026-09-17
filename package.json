@@ -1,0 +1,12 @@
+{
+  "name": "llm-cost-autopilot",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000",
+    "client": "npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
